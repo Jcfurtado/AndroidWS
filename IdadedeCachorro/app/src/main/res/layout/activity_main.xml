@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00b9d5"
+    tools:context="br.com.jcf.idadedecachorro.MainActivity">
+
+    <ImageView
+        android:id="@+id/imgFoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/cachorro" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite a idade do seu cachorro, para decobrir a idade dele em anos humanos"
+        android:padding="25dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/textView"
+        android:layout_below="@+id/imgFoto"
+        android:layout_centerHorizontal="true"
+        android:background="#4fc4d6"
+        android:textColor="@color/colorBlank"/>
+
+    <EditText
+        android:id="@+id/edtIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlank"
+        android:textSize="30sp"
+        android:ems="2"
+        android:inputType="number"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/descobrir_idade"
+        android:layout_below="@+id/edtIdade"
+        android:layout_centerHorizontal="true"
+        android:onClick="descobrirIdade"/>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4fc4d6"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlank"
+        android:padding="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/btnIdade"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="br.com.jcf.gasolinaoualcool.MainActivity">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="300dp"
+        android:layout_height="81dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tvPrecoAlcool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imgLogo"
+        android:layout_below="@+id/imgLogo"
+        android:layout_marginTop="15dp"
+        android:text="@string/preco_alcool"
+        android:textColor="@color/colorText"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtVlAlc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvPrecoAlcool"
+        android:layout_alignStart="@+id/tvPrecoAlcool"
+        android:layout_below="@+id/tvPrecoAlcool"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorBlank"
+        android:ems="4"
+        android:hint="0.000"
+        android:inputType="numberDecimal"
+        android:padding="@dimen/padding_caixaTexto"
+        android:textSize="@dimen/textSize_caixaTexto" />
+
+    <TextView
+        android:id="@+id/tvPrecoGas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtVlAlc"
+        android:layout_alignEnd="@+id/imgLogo"
+        android:text="@string/preco_gasolina"
+        android:textColor="@color/colorText"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtVlGas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnVerificar"
+        android:layout_alignEnd="@+id/tvPrecoGas"
+        android:layout_alignStart="@+id/tvPrecoGas"
+        android:background="@color/colorBlank"
+        android:ems="4"
+        android:hint="0.000"
+        android:inputType="numberDecimal"
+        android:padding="@dimen/padding_caixaTexto"
+        android:textSize="@dimen/textSize_caixaTexto" />
+
+    <Button
+        android:id="@+id/btnVerificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edtVlGas"
+        android:layout_alignStart="@+id/edtVlAlc"
+        android:layout_below="@+id/edtVlAlc"
+        android:layout_marginTop="15dp"
+        android:onClick="verificar"
+        android:text="@string/verificar" />
+
+    <TextView
+        android:id="@+id/tvResposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edtVlGas"
+        android:layout_alignStart="@+id/edtVlAlc"
+        android:layout_below="@+id/btnVerificar"
+        android:layout_marginTop="15dp"
+        android:hint="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="20sp" />
+
+</RelativeLayout>
